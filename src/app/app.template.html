@@ -1,0 +1,104 @@
+<ion-split-pane>
+
+  <!-- logged out menu -->
+  <ion-menu id="loggedOutMenu" [content]="content">
+
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title text-center home-txt> 
+        <h3 class="hometiel"><strong>MOUAWAD</strong>Books & Stationery s.a.r.l</h3>
+     </ion-title>
+    <ion-icon name="close" class="person-close" menuClose></ion-icon> 
+  </ion-navbar>  
+</ion-header>
+
+  <ion-content class="">
+    <div class="user_in">
+      <img src="assets/imgs/left.png">
+      <h3>Mr. Hisham</h3>
+    </div><!--user_in--> 
+    <div class="bgleft">
+      <img src="assets/imgs/left/1.png">
+      <img src="assets/imgs/left/2.png">
+      <img src="assets/imgs/left/3.png">
+      <img src="assets/imgs/left/4.png">
+      <img src="assets/imgs/left/5.png">
+      <img src="assets/imgs/left/6.png">
+      <img src="assets/imgs/left/7.png">
+      <img src="assets/imgs/left/8.png">
+    </div>
+    <div class="imgbtom">
+        <img src="assets/imgs/bottom.png">
+    </div>
+    <ion-list class="newadin">
+         <ion-item >
+            <ion-label>About</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Locate Us</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Contact us</ion-label>
+          </ion-item>
+    </ion-list>
+    <div class="user_in serach_in">
+      <img src="assets/imgs/serach.png">
+      <h3>Sign out</h3>
+    </div><!--user_in-->
+    <div class="social_in">
+      <img src="assets/imgs/face.png">
+      <img src="assets/imgs/insta.png">
+      <img src="assets/imgs/whats.png">
+    </div>
+  </ion-content>
+  </ion-menu>
+
+  <!-- logged in menu -->
+  <ion-menu id="loggedInMenu" [content]="content">
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="outer-content">
+
+      <ion-list>
+        <ion-list-header>
+          Navigate
+        </ion-list-header>
+        <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+
+      <ion-list>
+        <ion-list-header>
+          Account
+        </ion-list-header>
+        <button ion-item menuClose *ngFor="let p of loggedInPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+
+      <ion-list>
+        <ion-list-header>
+          Tutorial
+        </ion-list-header>
+        <button ion-item menuClose (click)="openTutorial()">
+          <ion-icon item-start name="hammer"></ion-icon>
+          Show Tutorial
+        </button>
+      </ion-list>
+
+    </ion-content>
+
+  </ion-menu>
+
+  <!-- main navigation -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>
+
+</ion-split-pane>

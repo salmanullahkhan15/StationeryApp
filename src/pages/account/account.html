@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>ACCOUNT</ion-title> 
+    <ion-icon ios="ios-person" md="ios-person-outline" class="person-icon"></ion-icon> 
+    <span class="user">HELLO <br>MR. HICHAM</span>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="outer-content">
+
+  	<ion-list>
+         <ion-item (click)="login()">
+		    <ion-label>LOGIN</ion-label>
+		  </ion-item>
+		  <ion-item (click)="signup()">
+		    <ion-label>SIGNUP</ion-label>
+		  </ion-item>
+		  <ion-item (click)="store()">
+		    <ion-label>STORE</ion-label>
+		  </ion-item>
+		  <ion-item (click)="detail()">
+		    <ion-label>DETAIL</ion-label>
+		  </ion-item>
+		  <ion-item (click)="profile()">
+		    <ion-label>MY PROFILE</ion-label>
+		  </ion-item>
+		  <ion-item (click)="team()">
+		    <ion-label>JOIN OUR TEAM</ion-label>
+		  </ion-item>
+	</ion-list>
+</ion-content>

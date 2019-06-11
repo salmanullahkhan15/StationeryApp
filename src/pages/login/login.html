@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Sign in</ion-title> 
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="search-bg">
+      <ion-searchbar placeholder="SEARCH IN HERE"></ion-searchbar>  
+        <span class="top-menu"><ion-icon ios="ios-menu" md="md-menu"  menuToggle></ion-icon></span>
+        <span class="basket"><ion-icon ios="ios-basket" md="ios-basket"></ion-icon></span>
+    </div>
+    <img src="assets/imgs/login_banner.png">
+	<div class="login_field">
+		<ion-list>
+			<ion-item>
+				<ion-input style="background:url('assets/imgs/icon.png')" placeholder="Username/Mobile number" clearInput></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-input style="background:url('assets/imgs/user.png')" placeholder="Password" clearInput></ion-input>
+			</ion-item>
+			<p><a href="#">Forgot password?</a></p>
+			<div class="checklboc"><ion-checkbox></ion-checkbox> <span>Keep me signed in</span></div>
+			<ion-item>
+				<button ion-button block color="primary">Sign In <img src="assets/imgs/next.png"></button>
+			</ion-item>
+			<p class="texnews"><a href="#">Create Account</a></p>
+		</ion-list>
+	</div>
+</ion-content>
